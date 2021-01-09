@@ -4,17 +4,10 @@ gender = raw_input("gender (M/F): ")
 ccs = raw_input("last charecter of your SSN:")
 CS = list.index(ccs)
 print("Possible SSNs:")
+#if the birthday is before the year 2000 just change the "A" to a "-" // im just way to lazy to add that simple function right now...or ever. 
 
 for i in range(0,100):
       if (i+bday*1000)%31 == (CS) and gender == ("M") and i%2 == (1):
         print bday,"A",i, ccs
       elif (i+bday*1000)%31 == (CS) and gender == ("F") and i%2 == (0):
         print bday,"A",i,ccs
-
-
-#for i in range(0,1000):
- #   for j in range(0,32):
-  #      if (i+bday*1000)%31 == list[j] and gender == ("M") and i%2 ==(1):
-   #     elif (i+bday*1000)%31 == list[j] and gender == ("F") and i%2 ==(0):
-     #       print bday, "A", i, list[j]
-
