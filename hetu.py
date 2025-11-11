@@ -6,7 +6,7 @@ def generate_possible_ssns(bday, gender, ccs):
     print("Possible SSNs:")
 
     for i in range(0, 1000):
-        if (i + int(bday) * 1000) % 31 == CS and (gender == "M" and i % 2 == 1) or (gender == "F" and i % 2 == 0):
+        if (i + int(bday) * 1000) % 31 == CS and ((gender == "M" and i % 2 == 1) or (gender == "F" and i % 2 == 0)):
             print(f"{bday}A{i} {ccs}")
 
 def main():
